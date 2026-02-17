@@ -18,7 +18,7 @@
     />
 
     <!-- Second Row: Activity Timeline and Active Studies -->
-    <v-row class="mb-6 dashboard-row">
+    <v-row class="mb-6">
       <v-col cols="12" lg="8">
         <div class="component-height">
           <ActiveStudies :studies="items" />
@@ -32,7 +32,7 @@
     </v-row>
 
     <!-- Third Row: Upcoming Webinar and Top Methods -->
-    <v-row class="mb-6 dashboard-row">
+    <v-row class="mb-6">
       <v-col cols="12" lg="4">
         <UpcomingWebinar :webinar-data="upcomingWebinar || {}" />
       </v-col>
@@ -45,7 +45,7 @@
     </v-row>
 
     <!-- Fourth Row: Blog Posts and Next Session -->
-    <v-row class="mb-6 dashboard-row">
+    <v-row class="mb-6">
       <v-col cols="12" lg="6">
         <BlogPosts />
       </v-col>
@@ -203,7 +203,7 @@ onMounted(() => {
   flex: 1;
   overflow-y: auto;
 }
-.dashboard-row {
+:deep(.v-row) {
   margin: -14px !important;
 }
 </style>
